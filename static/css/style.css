@@ -1,0 +1,191 @@
+body {
+    font-family: 'メイリオ', Meiryo,'Meiryo UI','ヒラギノ角ゴシック','Hiragino Sans','Noto Sans JP','ＭＳ 明朝', 'MS Mincho','Arial','Arial Black',sans-serif;
+    background-color: var(--DarkBlue);
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --NeonBlue: #4666ff;
+    --White: #ffffff;
+    --DarkBlue: #223a70;
+    --HeaderBackground: rgba(66,58,112,0.7);
+}
+
+@media screen and (min-width:1920px) {
+
+    Header#topHeader{
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        background-color: var(--HeaderBackground);
+        
+        ul {
+            display: flex;
+            width: 30%;
+            height: inherit;
+            a {
+                height: inherit;
+                img {
+                    height: inherit;
+                }
+            }
+            ul {
+                li.HeaderList {
+                    list-style: none;
+                    align-content: center;
+                    width: calc(100% / 3);
+                    text-align: center;
+                    text-decoration: underline solid 3px var(--HeaderBackground);
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+
+                }
+                li.HeaderList:Hover {
+                    text-decoration: underline solid 3px #fff;
+                    transition: all 150ms ease-in-out;
+                    background-color: var(--NeonBlule);
+                    transform: scale(1.3);
+                }
+
+                justify-content: space-between;
+                width: 100%;
+                font-size: 20px;
+                font-weight: 900;
+                margin: 0px auto;
+                padding: 0px;
+            }
+        }
+
+    }
+    Header.HeaderElementFade {
+        transition: all 500ms ease;
+        transform: translateY(0px);
+    }
+    Header.HeaderElementFadeout {
+        transition: all 650ms ease;
+        transform: translateY(-150px);
+    }
+
+
+    div.SmoothScroll {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 75px;
+        height: 75px;
+        border: solid 1px #fff;
+        border-radius: 100%;
+        #TopSmoothScrollButton {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+        #TopSmoothScrollButton:before {
+            display: flex;
+            justify-content: center;
+            content: '';
+            width: 25%;
+            height: 25%;
+            border: 0;
+            border-top: solid 5px #333;
+            border-right: solid 5px #333;
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+        #TopSmoothScrollButton:hover {
+            cursor: pointer;
+        }
+    }
+
+
+    div.container {
+        padding-top: 50px;
+
+        div.main {
+            div.sectionWrapper {
+                div.sectionLayout {
+                    div.sectionBlock {
+                        section.banner {
+                            background-image: url("../../files/BannerImage.png");
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            width: 100%;
+                            height: 100vh;
+
+                            div.sect_bannerText {
+                                padding: 75vh 0 0 5vw;
+
+                                h2.BannerTitle {
+                                    font-family: 'Arial Black';
+                                    color: white;
+                                    font-size: 80px;
+                                    font-weight: bold;
+                                    opacity: 0;
+                                }
+                                h2.BannerTitleFade {
+                                    transition: 500ms opacity ease;
+                                    opacity: 1;
+                                }
+                                h2.BannerTitleFadeout {
+                                    transition: 500ms opacity ease;
+                                    opacity: 0;
+                                }
+
+                            }
+
+                        }
+
+                        article.NEO-TRACK_3ColumnDescriptions {
+                            display: flex;
+                            width: 100%;
+                            section.column {
+                                width: calc(100% / 3);
+                                height: 100vh;
+                                color: white;
+                                text-align: center;
+                                border: 1px solid #000;
+                            }
+                            section.OrderHide {
+                                transition: all 800ms ease;
+                                transform: translateY(300px);
+                                opacity: 0;
+                            }
+                            section.OrderShow {
+                                transition: all 800ms ease;
+                                transform: translateY(0px);
+                                opacity: 1;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    footer {
+        width: fit-content;
+        height: 10vh;
+        align-content: center;
+        margin: 0px auto;
+        span {
+            font-size: small;
+        }
+    }
+
+}
