@@ -182,16 +182,15 @@ body {
                             width: 100%;
                             height: 50vh;
                             display: flex;
-                            border: 1px solid #000;
                             justify-content: center;
                             margin: 0 auto;
-                            section.head {
-                                width: 45%;
-                                h3 {
-                                    width: 100%;
-                                    text-align: left;
-                                }
-                            }
+                            transform: translateX(500px);
+                            opacity: 0;
+                        }
+                        article.stSlide {
+                            transition: all 750ms ease;
+                            transform: translateX(0px);
+                            opacity: 1;
                         }
 
                     }

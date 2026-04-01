@@ -42,6 +42,15 @@ window.onload = () => {
             });
         }
 
+        //スペック表の変数宣言//
+        const st = document.getElementById('SpecTable');
+        const stRect = st.getBoundingClientRect().top;
+
+        //スペック表スライドイン・アウト//
+        if(stRect <= 500) {
+            st.classList.add('stSlide');
+        }
+
         //Topにスムーススクロール//
         const SmoothScrollButton = document.getElementById('TopSmoothScrollButton');
         SmoothScrollButton.addEventListener('click', () => {
