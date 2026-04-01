@@ -27,6 +27,18 @@ window.onload = () => {
             HeaderElement.classList.add('HeaderElementFade');
         }
 
+        //Topにスムーススクロール//
+        const SmoothScrollButton = document.getElementById('TopSmoothScrollButton');
+
+        //ボタンクリック時の動作//
+        SmoothScrollButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                    behavior: 'smooth',
+            });
+        });
+
+
         //コラムの変数宣言//
         const col = document.getElementById('ColumnHeightScanner');
         const colRect = col.getBoundingClientRect().top;
@@ -40,6 +52,11 @@ window.onload = () => {
                     fadeEl.classList.add('OrderShow');
                 }, index * 350);                
             });
+            SmoothScrollButton.classList.remove('HideButton');
+            SmoothScrollButton.classList.add('ShowButton');
+        } else {
+            SmoothScrollButton.classList.remove('ShowButton');
+            SmoothScrollButton.classList.add('HideButton');
         }
 
         //スペック表の変数宣言//
@@ -50,15 +67,5 @@ window.onload = () => {
         if(stRect <= 500) {
             st.classList.add('stSlide');
         }
-
-        //Topにスムーススクロール//
-        const SmoothScrollButton = document.getElementById('TopSmoothScrollButton');
-        SmoothScrollButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                    behavior: 'smooth',
-            });
-        });
-
     })
 }

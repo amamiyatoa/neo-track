@@ -111,7 +111,7 @@ body {
     }
 
 
-    div.container {
+    main.container {
         padding-top: 50px;
 
         div.main {
@@ -186,6 +186,7 @@ body {
                             margin: 0 auto;
                             transform: translateX(500px);
                             opacity: 0;
+                            
                         }
                         article.stSlide {
                             transition: all 750ms ease;
