@@ -19,7 +19,7 @@ body {
 
     Header#topHeader{
         position: fixed;
-        width: 100%;
+        width: 100vw;
         height: 50px;
         background-color: var(--HeaderBackground);
         
@@ -149,14 +149,21 @@ body {
                         }
 
                         article.NEO-TRACK_3ColumnDescriptions {
-                            display: flex;
+                            height: 100vh;
                             width: 100%;
                             section.column {
-                                width: calc(100% / 3);
-                                height: 100vh;
+                                width: 100%;
+                                height: calc(100% / 3);
                                 color: white;
                                 text-align: center;
                                 border: 1px solid #000;
+
+                                h2.columnString {
+                                    font-family: 'Arial Black';
+                                    font-weight: bold;
+                                    font-size: 45px;
+                                    text-align: center;
+                                }
                             }
                             section.OrderHide {
                                 transition: all 800ms ease;
@@ -167,6 +174,23 @@ body {
                                 transition: all 800ms ease;
                                 transform: translateY(0px);
                                 opacity: 1;
+                            }
+
+                        }
+
+                        article.NEO-TRACK_SpecTables {
+                            width: 100%;
+                            height: 50vh;
+                            display: flex;
+                            border: 1px solid #000;
+                            justify-content: center;
+                            margin: 0 auto;
+                            section.head {
+                                width: 45%;
+                                h3 {
+                                    width: 100%;
+                                    text-align: left;
+                                }
                             }
                         }
 
