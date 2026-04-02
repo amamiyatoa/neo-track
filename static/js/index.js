@@ -29,6 +29,7 @@ window.onload = () => {
 
         //Topにスムーススクロール//
         const SmoothScrollButton = document.getElementById('TopSmoothScrollButton');
+        const SmoothScrollButtonDisplay = document.querySelector('.SmoothScroll');
 
         //ボタンクリック時の動作//
         SmoothScrollButton.addEventListener('click', () => {
@@ -45,22 +46,22 @@ window.onload = () => {
         const ColumnElements = document.querySelectorAll('.column');
 
         //コラムフェードイン・アウト//
-        if(colRect <= 600) {
+        if(colRect <= 500) {
             ColumnElements.forEach((fadeEl,index) => {
                 setTimeout(() => {
                     fadeEl.classList.remove('OrderHide');
                     fadeEl.classList.add('OrderShow');
                 }, index * 350);                
             });
-            SmoothScrollButton.classList.remove('HideButton');
-            SmoothScrollButton.classList.add('ShowButton');
+            SmoothScrollButtonDisplay.classList.remove('HideButton');
+            SmoothScrollButtonDisplay.classList.add('ShowButton');
         } else {
-            SmoothScrollButton.classList.remove('ShowButton');
-            SmoothScrollButton.classList.add('HideButton');
+            SmoothScrollButtonDisplay.classList.remove('ShowButton');
+            SmoothScrollButtonDisplay.classList.add('HideButton');
         }
 
         //スペック表の変数宣言//
-        const st = document.getElementById('SpecTable');
+        const st = document.querySelector('.InitSt');
         const stRect = st.getBoundingClientRect().top;
 
         //スペック表スライドイン・アウト//
