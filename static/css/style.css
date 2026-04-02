@@ -109,6 +109,14 @@ body {
             cursor: pointer;
         }
     }
+    div.HideButton {
+        transition: all 700ms ease-in-out;
+        opacity: 0;
+    }
+    div.ShowButton {
+        transition: all 700ms ease-in-out;
+        opacity: 1;
+    }
 
 
     main.container {
@@ -184,14 +192,15 @@ body {
                             display: flex;
                             justify-content: center;
                             margin: 0 auto;
-                            transform: translateX(500px);
-                            opacity: 0;
-                            
-                        }
-                        section.stSlide {
-                            transition: all 750ms ease;
-                            transform: translateX(0px);
-                            opacity: 1;
+                            table.InitSt {
+                                transform: translateX(500px);
+                                opacity: 0;
+                            }
+                            table.stSlide {
+                                transition: all 750ms ease;
+                                transform: translateX(0px);
+                                opacity: 1;
+                            }
                         }
 
                     }
